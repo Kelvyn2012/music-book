@@ -16,13 +16,10 @@ app.post("/artists", async (req, res) => {
   try {
     const response = await axios.get(API_URL + artist);
     const artistData = response.data.data;
-    console.log(artistData);
     const artistInfo = artistData.map((info) => {
       return info;
     });
-    console.log(artistInfo)
     res.render("index.ejs", { content: artistInfo });
-   
   } catch (error) {
     console.error(error);
   } //

@@ -17,19 +17,20 @@
     <form action="/artists" method="post">
       <label for="artistName">Search Artist</label>
       <input type="text" name="artistName" placeholder="e.g Eminem" />
-      <input type="submit" />
+      <button>Search</button>
     </form>
     <div>
       <h2>Songs</h2>
+
+      <%content.forEach((contents)=>{%>
+        <img src="<%= contents.artist.picture_medium %>" alt="">
       
       <ul>
-        <%content.forEach((contents)=>{%>
         <li>
           <a href="<%= contents.preview%>"><%= contents.title_short%></a>
         </li>
-        <% })%>
       </ul>
-     
+      <% })%>
     </div>
     <!--[if lt IE 7]>
       <p class="browsehappy">
