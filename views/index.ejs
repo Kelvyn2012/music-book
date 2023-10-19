@@ -21,10 +21,10 @@
     </form>
     <div>
       <h2>Songs</h2>
-
+      <h2><%= content[0].artist.name %></h2>
       <%content.forEach((contents)=>{%>
-        <img src="<%= contents.artist.picture_medium %>" alt="">
-      
+      <img src="<%= contents.artist.picture_medium %>" alt="" />
+
       <ul>
         <li>
           <a href="<%= contents.preview%>"><%= contents.title_short%></a>
