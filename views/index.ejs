@@ -21,7 +21,14 @@
     </form>
     <div>
       <h2>Songs</h2>
+      <%if(content.length === 0){%>
+      <h2>Artist Name</h2>
+      <% }else{%>
       <h2><%= content[0].artist.name %></h2>
+      <% } %> 
+      
+      
+      
       <%content.forEach((contents)=>{%>
       <img src="<%= contents.artist.picture_medium %>" alt="" />
 
