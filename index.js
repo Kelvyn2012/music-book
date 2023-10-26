@@ -13,7 +13,7 @@ app.get("/", (req, res) => {
 
 app.post("/artists", async (req, res) => {
   const artist = req.body.artistName;
-  
+
   try {
     const response = await axios.get(API_URL + artist);
     const artistData = response.data.data;
@@ -25,7 +25,6 @@ app.post("/artists", async (req, res) => {
     console.error(error);
   } //
 });
-("");
 
 app.listen(port, () => {
   console.log(`Server has started in port ${port}`);
